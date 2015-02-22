@@ -4,32 +4,54 @@
 }
 
 body {
-  background: #23922a;
+  background: black;
 }
 
 header {
   text-align: center;
-  border-bottom: 5px solid #8b9223;
+  border-bottom: 5px dotted yellow;
   overflow: auto;
   padding-bottom: 1em;
-  background: #173a0e;
-  color: #8b9223;
+  background-image: url(http://www.8bitnights.com/wp-content/themes/citydreams/images/header.gif);
+  color: #eaee00;
 }
 
 header h1 {
+  margin-left: 90px;
+  position: relative;
+  display: inline-block;
   padding: 1em 0 .5em;;
-  font-size: 6em;
+  font-size: 4em;
   letter-spacing: .12em;
-  font-family: 'Bangers', cursive;
-  }
+  font-family: $secondary-font;
+  // font-family: 'Bangers', cursive;
+  animation: blink 1s steps(5, start) infinite;
+     -webkit-animation: blink 1s steps(5, start) infinite;
+   }
+   @keyframes blink {
+     to {
+       visibility: hidden;
+     }
+   }
+   @-webkit-keyframes blink {
+     to {
+       visibility: hidden;
+     }
+   }
+
 
 .pirate-o {
+  display: inline-block;
+  position: absolute;
+  top: 75px;
+  left: 187px;
+  margin-top: 0px;
   font-family: "memory-header", "Bangers", cursive;
-  font-size: .9em;
+  font-size: 2.2em;
   -webkit-animation-name: fade;
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: 1;
-  color: #23922a;
+  color: red;
 }
 
 @-webkit-keyframes wiggle {
@@ -68,25 +90,46 @@ header h1 {
 
 .lives-remaining {
   position: inline-block;
+  padding: 0;
   float: left;
-  margin-left: 10%;
+  font-size: 2em;
+  margin-left: 3%;
   font-family: "memory-header", times;
+  color: #03e23b;
 }
 
 .clock {
   float: right;
   margin-right: 10%;
-  font-family: 'Bangers';
+  font-family: $secondary-font;
   letter-spacing: .12em;
+}
+
+.start-new-game {
+  height: 2.5em;
+  padding: .5em 0 0 0;
+  color:red;
+  margin-top:-20px;
+  margin-left: -50px;
+  font-size: .85em;
+  background-color:black;
+  font-family: $secondary-font;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-content {
+  background-image:url(http://files.enjin.com/564201/images/bg/bg8.png);
 }
 
 .game-board{
   width: 87%;
-  margin: 3em auto;
+  padding: 3em 0;
+  margin: 0 auto;
   /*border: 3px #8b9223 solid;*/
   min-height: 600px;
   text-align: center;
-
 }
 
 
@@ -98,7 +141,7 @@ header h1 {
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
-  background: #173a0e;
+  background: #1570A0;
   overflow: auto;
   font-family: "memory-header";
 

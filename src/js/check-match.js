@@ -35,28 +35,3 @@ app.checkMatch = function(){
      }
   });
 };
-
-
-// $('.game-card').on('click', function (e)  {
-//     e.preventDefault();
-//     var thisCard = $(this);
-//     console.log(thisCard)
-//     secondCard = thisCard.find('.game-card').data('id');
-//     console.log("Hello, am I still alive?");
-//     console.log(SecondCard);
-//     return secondCard;
-//
-//   });
-//   console.log(firstCard);
-//   console.log(secondCard);
-//   if (firstCard = secondCard) {
-//     alert("HALLELUJIAHH BASBY WE GOIN TO BEACH WEEEEEKS!");
-//   }
-//
-//   else {
-//     alert("sorry i don't play that way!");
-//   }
-//   return firstCard;
-
-
-// };

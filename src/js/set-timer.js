@@ -1,10 +1,16 @@
-app.setTimer = function () {
+app.setTimer = function (counter1) {
 
-  var start = 60000;
+  var counter1 = 100000;
+   function counterFunc1() {
 
-  setInterval(function() {
-      $('.clock').text((start - new Date) / 100);
-  }, 500);
-
-
+       $('.seconds').text(counter1);
+       counter1--;
+       if (counter1 > 0) {
+           setTimeout(counterFunc1, 5);
+       } else {
+           $('.seconds').text('You Dead');
+          return false;
+       }
+   }
+   counterFunc1();
 };

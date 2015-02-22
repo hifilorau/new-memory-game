@@ -12,9 +12,8 @@ app.decrementLives = function () {
     alert("You Suck. O'Doyle Rules!");
     $('.main-content').html("");
     app.createGameTemplate(9);
-    $(".lives-remaining").text('aaaaaaaaaa');
-    app.checkMatch();
-    app.setTimer();
+    $(".lives-remaining").text('EEEEEEEEE');
+  
 
   };
 

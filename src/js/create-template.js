@@ -8,4 +8,5 @@ app.createGameTemplate = function (numPairs) {
     $('.main-content').html(html);
     $('.game-icon').hide();
 
+
   };
