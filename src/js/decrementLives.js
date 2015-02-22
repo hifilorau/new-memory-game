@@ -9,6 +9,7 @@ app.decrementLives = function () {
 
   if (livesLeftArr.length === 0) {
     $('.clock').text('GAME OVER');
+    $('.game-tiles').text = undefined;
 
     startNewGame();
 
