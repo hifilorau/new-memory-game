@@ -1,18 +1,22 @@
 app.startNewGame = function () {
-  var startButton = $('.button-wrap');
-  $('.main-content').html("");
+    var startButton = $('.button-wrap');
+    $('.main-content').html("");
+    app.createGameTemplate(9);
+    $('.seconds').text('100000');
 
-  app.createGameTemplate(9);
+    $(startButton).on('click', function () {
+       app.setTimer();
+       alert("testing");
+       var livesLeft = $(".lives-remaining").text('EEEEEEEEE');
 
-  $(startButton).on('click', function () {
-     app.setTimer();
-     var livesLeft = $(".lives-remaining").text('EEEEEEEEE');
-     app.createGameTemplate(9);
-     $('html, body').animate({
-         scrollTop: $(".game-board").offset().top
-     }, 2000);
-     app.checkMatch();
-  });
+
+       $('html, body').animate({
+           scrollTop: $(".game-board").offset().top
+       }, 2000);
+
+       app.createGameTemplate(9);
+       app.checkMatch();
+    });
 
 
 
@@ -22,17 +26,15 @@ app.startNewGame = function () {
         $(startButton).fadeTo(100, 0.1).fadeTo(200, 1.0);
     }
 
+// audio playback & pause begin here
+
     var audioElement = document.createElement('audio');
-       audioElement.setAttribute('src', 'https://s3-us-west-2.amazonaws.com/new-memory/01+-+Title.mp3');
 
-       //audioElement.load()
-       $.get();
-       audioElement.addEventListener("load", function() {
-       audioElement.play();
-       }, true);
-
-
-
+    audioElement.setAttribute('src', 'https://s3-us-west-2.amazonaws.com/new-memory/01+-+Title.mp3');
+    $.get();
+    audioElement.addEventListener("load", function() {
+    audioElement.play();
+    }, true);
 
        $('.play').click(function() {
        audioElement.play();

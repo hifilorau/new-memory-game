@@ -13,7 +13,9 @@ header {
   overflow: auto;
   padding-bottom: 1em;
   background-image: url(http://www.8bitnights.com/wp-content/themes/citydreams/images/header.gif);
+  background-size: cover;
   color: #eaee00;
+  height: 100vh;
 }
 
 header h1 {
@@ -90,20 +92,24 @@ header h1 {
 }
 
 .lives-remaining {
-  position: inline-block;
+  position: absolute;
   padding: 0;
-  float: left;
+  top: 30px;
+  left: 76px;
   font-size: 2em;
   margin-left: 3%;
   font-family: "memory-header", times;
-  color: #03e23b;
+  color:  yellow;
 }
 
-.clock {
-  float: right;
+.seconds {
+  position: absolute;
+  right: 0;
+  top: 30px;
   margin-right: 10%;
   font-family: $secondary-font;
   letter-spacing: .12em;
+  color: yellow;
 }
 
 .button-wrap {
@@ -134,7 +140,7 @@ header h1 {
 
 .game-board{
   width: 87%;
-  padding: 3em 0;
+  padding: 5em 0 3em;
   margin: 0 auto;
   /*border: 3px #8b9223 solid;*/
   min-height: 600px;

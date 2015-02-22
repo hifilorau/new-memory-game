@@ -7,11 +7,13 @@ app.decrementLives = function () {
   var newStr = livesLeftArr.join("");
   $(".lives-remaining").text(newStr);
 
-  if (livesLeftArr.length === 0) {
-    $('.clock').text('GAME OVER');
-    $('.game-tiles').text = undefined;
+  if (livesLeftArr.length <= 0) {
+    $('.seconds').text('GAME OVER');
+    alert("gameover");
+  
+    // $('.game-tiles').text = undefined;
 
-    startNewGame();
+    // startNewGame();
 
   }
 };

@@ -13,12 +13,8 @@
   <header>
       <h1>MEM<span class="pirate-o">E</span></h1><h1>RIES</h1>
         <div class="secondary-game-info">
-            <span class="lives-remaining">EEEEEEEEE</span>
             <div class="button-wrap">
                 <button class="start-new-game play">START NEW GAME</button>
-            </div>
-            <div class="clock">
-                <span class="seconds">100000</span>
             </div>
       </div>
   </header>
@@ -29,6 +25,8 @@
 
 
      <script type="text/html" id="gameBoard">
+            <span class="lives-remaining">EEEEEEEEE</span>
+            <span class="seconds">100000</span>
        <div class="game-board">
          <% m.cards.forEach(function (card) { %>
            <div class="game-tile">
