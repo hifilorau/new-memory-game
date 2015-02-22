@@ -20,7 +20,7 @@ header h1 {
   margin-left: 90px;
   position: relative;
   display: inline-block;
-  padding: 1em 0 .5em;;
+  padding: 3em 0 2em;;
   font-size: 4em;
   letter-spacing: .12em;
   font-family: $secondary-font;
@@ -43,8 +43,8 @@ header h1 {
 .pirate-o {
   display: inline-block;
   position: absolute;
-  top: 75px;
-  left: 187px;
+  top: 205px;
+  left: 185px;
   margin-top: 0px;
   font-family: "memory-header", "Bangers", cursive;
   font-size: 2.2em;
@@ -86,6 +86,7 @@ header h1 {
 
 .secondary-game-info {
   font-size: 1.3em;
+  position: relative;
 }
 
 .lives-remaining {
@@ -105,12 +106,19 @@ header h1 {
   letter-spacing: .12em;
 }
 
+.button-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .start-new-game {
   height: 2.5em;
   padding: .5em 0 0 0;
   color:red;
-  margin-top:-20px;
-  margin-left: -50px;
+  // margin-top:-20px;
+  // margin-left: -50px;
   font-size: .85em;
   background-color:black;
   font-family: $secondary-font;
@@ -121,6 +129,7 @@ header h1 {
 
 .main-content {
   background-image:url(http://files.enjin.com/564201/images/bg/bg8.png);
+  position: relative;
 }
 
 .game-board{
@@ -131,21 +140,52 @@ header h1 {
   min-height: 600px;
   text-align: center;
 }
+.board-overly {
+  position: absolute;
+  width: 35em;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity:.7;
+  background-color: purple;
 
+}
 
 .game-tile {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
   width: 15%;
-  border-radius: 10px;
+  border: 7px dotted #B13AFF;
+  background: black;
+  opacity: .5;
+  // border-radius: 10px;
   cursor: pointer;
   text-align: center;
-  background: #1570A0;
+  // background: #1570A0;
   overflow: auto;
   font-family: "memory-header";
-
 }
+
+.game-tile:hover {
+  border-color: yellow;
+  background: black;
+  opacity: .85;
+  // animation: blink 5s steps(5, start) infinite;
+  //    -webkit-animation: blink 1s steps(5, start) infinite;
+   }
+
+   @keyframes blink {
+     to {
+       visibility: hidden;
+     }
+   }
+   @-webkit-keyframes blink {
+     to {
+       visibility: hidden;
+     }
+   }
 
 .game-tile:before {
   padding-top: 100%;
@@ -155,10 +195,7 @@ header h1 {
 }
 
 
-.game-tile:hover {
-  opacity: .7;
 
-}
 
 
 .game-time:after {
@@ -187,7 +224,7 @@ input[type="checkbox"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #23922a;
+  color: #03e23b;
   font-size: 3em;
 
 

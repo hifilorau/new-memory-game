@@ -20,9 +20,6 @@ app.gameDeck = function (numPairs) {
     return arr;
   }
 
-  $
-
-
   return shuffle(cards);
 
 

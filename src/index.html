@@ -11,17 +11,22 @@
 <body>
 
   <header>
-      <h1>Mem<span class="pirate-o">E</span></h1><h1>ry</h1>
+      <h1>Mem<span class="pirate-o">E</span></h1><h1>ries</h1>
         <div class="secondary-game-info">
-        <span class="lives-remaining">EEEEEEEEE</span>
-        <button class="start-new-game">START NEW GAME</button>
-        <div class="clock">
-            <span class="seconds">100000</span>
-        </div>
+            <span class="lives-remaining">EEEEEEEEE</span>
+            <div class="button-wrap">
+                <button class="start-new-game">START NEW GAME</button>
+            </div>
+            <div class="clock">
+                <span class="seconds">100000</span>
+            </div>
       </div>
   </header>
 
-  <div class="main-content"></div>
+  <div class="main-content">
+      <div class="board-overlay"></div>
+  </div>
+
 
      <script type="text/html" id="gameBoard">
        <div class="game-board">

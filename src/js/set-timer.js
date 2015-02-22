@@ -1,4 +1,4 @@
-app.setTimer = function (counter1) {
+app.setTimer = function () {
 
   var counter1 = 100000;
    function counterFunc1() {
@@ -8,7 +8,7 @@ app.setTimer = function (counter1) {
        if (counter1 > 0) {
            setTimeout(counterFunc1, 5);
        } else {
-           $('.seconds').text('You Dead');
+           $('.clock').text('You Dead');
           return false;
        }
    }
