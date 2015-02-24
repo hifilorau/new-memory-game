@@ -1,16 +1,19 @@
 app.setTimer = function () {
 
   var counter1 = 100000;
-   function counterFunc1() {
+   counterFunc1();
 
+   function counterFunc1() {
        $('.seconds').text(counter1);
        counter1--;
-       if (counter1 > 0) {
-           setTimeout(counterFunc1, 5);
+       var livesLeft = $(".lives-remaining").text();
+       var livesLeftArr = livesLeft.split("");
+       if (counter1 > 0 && livesLeftArr.length > 0){
+          setTimeout(counterFunc1, 5);
        } else {
-           $('.clock').text('You Dead');
-          return false;
+           console.log('donkeys fly');
+          //  app.gameOver();
        }
    }
-   counterFunc1();
+
 };

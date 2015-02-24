@@ -1,0 +1,13 @@
+.lose-background {
+  background: url(images/punchout-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  font-family: $secondary-font;
+}
+
+.lose-message {
+  padding-top: 15%;
+  color: yellow;
+  text-align: center;
+  font-size: 2em;
+}
