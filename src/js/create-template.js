@@ -49,14 +49,25 @@ app.createGameTemplate = function (numPairs) {
       audioElement.addEventListener("load", function() {
       audioElement.play();
       }, true);
+	    $('.mute').hide();
 
-         $('.play').click(function() {
-         audioElement.play();
+         $('.unmute').on('click',function() {
+           var play=$(this);
+          //  $('.pause').toggle('show-audio');
+           audioElement.play();
+					 play.hide();
+					 $('.mute').show();
+//           $(play).hide('.pause');
+					
          });
 
 
-         $('.pause').click(function() {
-         audioElement.pause();
+         $('.mute').on('click', function() {
+           var pause = $(this);
+           audioElement.pause();
+					 pause.hide();
+           $('.unmute').show();
+//           $(pause).toggle('hide-audio');
          });
   };
 

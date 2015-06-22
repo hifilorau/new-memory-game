@@ -1,0 +1,14 @@
+.unmute, .mute {
+  cursor: pointer;
+	font-family: $secondary-font;
+	color: lawngreen;
+	padding: .25em;
+}
+//
+//.hide-audio {
+//  visibility:hidden;
+//}
+
+.show-audio {
+  visibility: visible;
+}
